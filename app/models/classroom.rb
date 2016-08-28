@@ -17,3 +17,7 @@ class Classroom < ActiveRecord::Base
     students.where("birthday is not null").order("birthday asc").first
   end
 end
+    # students_w_birthdays = self.students.select do |student|
+    #   !student.birthday.nil?
+    # end
+    # students_w_birthdays.sort {|student| student.birthday}
